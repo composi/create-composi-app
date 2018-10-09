@@ -1,0 +1,18 @@
+@import url(css-reset.css);
+/****************/
+/* Local Styles */
+/****************/
+
+:root {
+  --masthead-background-color: hsl(4, 100%, 50%);
+  --masthead__header-color: hsl(150, 50%, 100%);
+}
+header {
+  background-color: var(--masthead-background-color);
+  padding: 20px;
+}
+header h1 {
+  color: var(--masthead__header-color);
+  margin: 0;
+  font-size: 2rem
+}

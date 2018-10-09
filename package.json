@@ -1,0 +1,35 @@
+{
+  "name": "create-composi-app",
+  "version": "0.5.0",
+  "description": "A CLI to create new projects ready to use @composi/core for development.",
+  "main": "index.js",
+  "bin": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/composi/create-composi-app.git"
+  },
+  "keywords": [
+    "frontend",
+    "cli",
+    "composi",
+    "jsx",
+    "virtual dom",
+    "functional",
+    "components"
+  ],
+  "author": "Robert Biggs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/composi/create-composi-app/issues"
+  },
+  "homepage": "https://github.com/composi/create-composi-app#readme",
+  "dependencies": {
+    "fs-extra": "^7.0.0"
+  },
+  "devDependencies": {
+    "chalk": "^2.4.1"
+  }
+}
