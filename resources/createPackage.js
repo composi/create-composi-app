@@ -12,7 +12,7 @@ module.exports = opts => {
     "build": "gulp",
     "build:fresh": "gulp fresh-build",
     "build:production": "gulp production",
-    "clean": "rimraf dist/{css/*,js/*,images/*}",
+    "clean": "rimraf dist/*",
     "format": "prettier --no-semi --single-quote --write ./src/js/*",
     "lint": "eslint --config ./.eslintrc.json src/js",
     "start": "npm run build",
