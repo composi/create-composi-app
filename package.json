@@ -1,5 +1,5 @@
 {
-  "name": "create-composi-app",
+  "name": "@composi/create-composi-app",
   "version": "0.5.7",
   "description": "A CLI to create new projects ready to use @composi/core for development.",
   "main": "index.js",
@@ -31,5 +31,8 @@
   },
   "devDependencies": {
     "chalk": "^2.4.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
