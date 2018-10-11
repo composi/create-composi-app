@@ -25,7 +25,7 @@ module.exports = opts => {
     "@babel/preset-env": "^7.1.0",
     "@composi/core": "^0.7.0",
     "@composi/datastore": "^1.0.5",
-    "@composi/fragment": "^1.0.2",
+    "@composi/fragment": "^1.0.3",
     "babel-eslint": "^10.0.1",
     "browser-sync": "^2.24.7",
     "eslint": "^4.19.1",

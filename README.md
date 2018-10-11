@@ -1,6 +1,6 @@
 # @composi/create-composi-app
 
-Packge to create projects ready to use @composi/core to create desktop and mobile websites, PWAs and hybrid apps.
+Package to create projects ready to use @composi/core to create desktop and mobile websites, PWAs and hybrid apps.
 
 
 ## Install
