@@ -108,3 +108,18 @@ And, in the case your project's dist folder has gotten messy and your not sure w
 npm run clean
 ```
 After cleaning out the dist folder, you can run `npm run build:fresh` to get just the files you need in the dist folder.
+
+## Less Typing
+
+You can use an alias to create a shortcut so you don't have to  type out `create-composi-app`. For macOS and Linux, open your .bashprofile and add the following line:
+
+```bash
+alias cca="create-composi-app"
+```
+Restart the terminal. Now you should be able to use `create-composi-app` by typeing `cca`. 
+
+For Windows, in the command prompt enter:
+
+```bash
+doskey cca=create-composi-app
+```
