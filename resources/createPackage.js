@@ -27,7 +27,7 @@ module.exports = opts => {
     "@composi/datastore": "^1.2.0",
     "@composi/fragment": "^1.0.3",
     "@composi/idb": "^1.0.0",
-    "@composi/styler": "^1.0.0",
+    "@composi/styler": "^1.0.1",
     "babel-eslint": "^10.0.1",
     "browser-sync": "^2.24.7",
     "eslint": "^4.19.1",
