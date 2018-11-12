@@ -1,6 +1,6 @@
 {
   "name": "@composi/create-composi-app",
-  "version": "0.6.14",
+  "version": "0.7.0",
   "description": "A CLI to create new projects ready to use @composi/core for development.",
   "main": "index.js",
   "bin": "index.js",
