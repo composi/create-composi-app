@@ -1,6 +1,6 @@
 {
   "name": "@composi/create-composi-app",
-  "version": "0.7.2",
+  "version": "0.7.3",
   "description": "A CLI to create new projects ready to use @composi/core for development.",
   "main": "index.js",
   "bin": "index.js",
@@ -27,9 +27,7 @@
   },
   "homepage": "https://github.com/composi/create-composi-app#readme",
   "dependencies": {
-    "fs-extra": "^7.0.0"
-  },
-  "devDependencies": {
+    "fs-extra": "^7.0.0",
     "chalk": "^2.4.1"
   },
   "publishConfig": {
