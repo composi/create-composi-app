@@ -26,7 +26,7 @@ module.exports = opts => {
     "@composi/core": "^1.0.0",
     "@composi/datastore": "^1.2.2",
     "@composi/fragment": "^1.0.3",
-    "@composi/gestures": "^1.0.0",
+    "@composi/gestures": "^1.0.1",
     "@composi/idb": "^1.0.1",
     "@composi/router": "^0.5.1",
     "@composi/styler": "^1.0.3",
