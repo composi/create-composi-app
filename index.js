@@ -37,7 +37,7 @@ const composi = (() => {
     console.log(' ')
     console.log('If a folder already exists with your project\'s name, it will be overwritten.')
     console.log(' ')
-    console.log('To get more help for using create-composi-app visit the website:'); console.log(chalk`{green.cyan https://composi.github.io/docs/create-composi-app/usage.html}`)
+    console.log('To get more help for using create-composi-app visit the website:'); console.log(chalk`{green.cyan https://composi.github.io/en/docs/create-composi-app/usage.html}`)
     console.log(' ')
   }
 
