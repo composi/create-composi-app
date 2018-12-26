@@ -25,7 +25,7 @@ module.exports = opts => {
     "@babel/preset-env": "^7.1.0",
     "@composi/are-equal": "^1.0.4",
     "@composi/core": "^1.1.4",
-    "@composi/datastore": "^1.2.4",
+    "@composi/datastore": "^1.2.5",
     "@composi/fragment": "^1.0.4",
     "@composi/gestures": "^1.0.3",
     "@composi/idb": "^1.0.2",
