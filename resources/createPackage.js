@@ -19,10 +19,10 @@ module.exports = opts => {
     "test": "echo \\"Error: no test specified\\" && exit 1"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.2",
-    "@babel/plugin-transform-parameters": "^7.1.0",
-    "@babel/plugin-transform-react-jsx": "^7.0.0",
-    "@babel/preset-env": "^7.1.0",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-parameters": "^7.2.0",
+    "@babel/plugin-transform-react-jsx": "^7.2.0",
+    "@babel/preset-env": "^7.2.3",
     "@composi/are-equal": "^1.0.4",
     "@composi/core": "^1.1.4",
     "@composi/datastore": "^1.2.5",
