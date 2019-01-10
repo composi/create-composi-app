@@ -1,4 +1,5 @@
-import { h, render } from '@composi/core'
+import { h, render, run, union } from '@composi/core'
+import { mergeObjects } from '@composi/merge-objects'
 import { Title } from './components/title'
 
 // Render title component:
