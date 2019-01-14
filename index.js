@@ -5,6 +5,7 @@
 const fs = require('fs-extra')
 const createPackage = require('./resources/createPackage')
 const createHTML = require('./resources/createHTML')
+const createREADME = require('./resources/README.js')
 const chalk = require('chalk')
 
 // Import local values:
@@ -90,6 +91,10 @@ const composi = (() => {
     name: ORIGINAL_NAME
   })
 
+  const README = createREADME({
+    name: PACKAGE_NAME
+  })
+
   fs.outputFile(
     p.join(PROJECT_PATH, 'package.json'),
     PACKAGE
@@ -100,9 +105,9 @@ const composi = (() => {
     HTML
   ).catch(err => console.error(err))
 
-  fs.copy(
-    p.join(SOURCE_PATH, 'resources', 'README.md'),
-    p.join(PROJECT_PATH, 'README.md')
+  fs.outputFile(
+    p.join(PROJECT_PATH, 'README.md'),
+    README
   ).catch(err => console.error(err))
 
   fs.copy(
