@@ -32,6 +32,7 @@ module.exports = opts => {
     "@composi/idb": "^1.0.3",
     "@composi/router": "^0.5.3",
     "@composi/styler": "^1.0.5",
+    "@composi/uuid": "^1.0.4",
     "babel-eslint": "^10.0.1",
     "browser-sync": "^2.24.7",
     "eslint": "^4.19.1",
