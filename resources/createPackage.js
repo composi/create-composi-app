@@ -33,7 +33,7 @@ module.exports = opts => {
     "@composi/styler": "^1.0.5",
     "@composi/uuid": "^1.0.4",
     "babel-eslint": "^10.0.1",
-    "browser-sync": "^2.24.7",
+    "browser-sync": "^2.26.3",
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.11.1",
     "gulp": "^4.0.0",
