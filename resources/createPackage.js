@@ -24,7 +24,7 @@ module.exports = opts => {
     "@babel/plugin-transform-react-jsx": "^7.2.0",
     "@babel/preset-env": "^7.2.3",
     "@composi/are-equal": "^1.0.4",
-    "@composi/core": "^1.3.1",
+    "@composi/core": "^1.3.2",
     "@composi/datastore": "^1.2.7",
     "@composi/gestures": "^1.0.6",
     "@composi/get-type": "^1.0.5",
