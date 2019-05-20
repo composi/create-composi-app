@@ -30,7 +30,7 @@ module.exports = opts => {
     "@composi/gestures": "^1.0.6",
     "@composi/get-type": "^1.0.5",
     "@composi/idb": "^1.0.3",
-    "@composi/router": "^0.6.1",
+    "@composi/router": "^0.7.1",
     "@composi/styler": "^1.0.5",
     "@composi/uuid": "^1.0.4",
     "babel-eslint": "^10.0.1",
