@@ -32,31 +32,31 @@ create-composi-app --version
 
 ## Create New Project
 
-To create a new project, you open your terminal and type in create-composi-app followed by the name for the project. This will create a project with that name on your desktop:
+To create a new project, you open your terminal and type in create-composi-app followed by the `-n` flag and the name for the project. This will create a project with that name on your desktop:
 
 ```bash
-create-composi-app MyProj
+create-composi-app -n MyProj
 ```
 
-When providing a name, create-composi-app will always use the name as provided. However, for the package.json file it has to use a valid name. This means it makes the name lowercase. It also converts spaces to hyphens. 
+When providing a name, create-composi-app will always use the name as provided. However, for the package.json file it has to use a valid name. This means it makes the name lowercase. It also converts spaces to hyphens.
 
 If you want to use a multi-word name with spaces, you need to enclose it in quotes:
 
 ```bash
-create-composi-app "My Project"
+create-composi-app -n "My Project"
 ```
 Although the project folder will be "My Project", the package name will be "my-project".
 
 ## Provide Path for New Project
 
-When you only provide a name for a project, create-composi-app creates it on the Desktop. However, you can provide a second argument as the path for where you want the new project created. Of course this path needs to follow the naming conventions of your operating system:
+When you only provide a name for a project, create-composi-app creates it on the Desktop. However, you can provide an argument with the flag `-p` as the path for where you want the new project created. Of course this path needs to follow the naming conventions of your operating system:
 
 ```bash
 # For Mac and Linux:
-create-composi-app "My App" "~/Desktop/dev/personal"
+create-composi-app -n "My App" -p "~/Desktop/dev/personal"
 
 # For Windows:
-create-composi-app "My App" "~\Desktop\dev\personal"
+create-composi-app -n "My App" -p "~\Desktop\dev\personal"
 ```
 
 ## Install Dependencies and launch project.
@@ -116,7 +116,7 @@ You can use an alias to create a shortcut so you don't have to  type out `create
 ```bash
 alias cca="create-composi-app"
 ```
-Restart the terminal. Now you should be able to use `create-composi-app` by typeing `cca`. 
+Restart the terminal. Now you should be able to use `create-composi-app` by typeing `cca`.
 
 For Windows, in the command prompt enter:
 
