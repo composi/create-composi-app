@@ -119,11 +119,6 @@ const createComposiApp = (() => {
     p.join(PROJECT_PATH, '.gitignore')
   ).catch(err => console.error(err))
 
-  fs.copy(
-    p.join(SOURCE_PATH, 'resources', 'jsconfig.json'),
-    p.join(PROJECT_PATH, 'jsconfig.json')
-  ).catch(err => console.error(err))
-
   fs.copy(p.join(
     SOURCE_PATH, 'resources', '.eslintrc.json'),
     p.join(PROJECT_PATH, '.eslintrc.json')
@@ -147,6 +142,11 @@ const createComposiApp = (() => {
   fs.copy(
     p.join(SOURCE_PATH, 'resources', 'src', 'images'),
     p.join(PROJECT_PATH, 'src', 'images')
+  ).catch(err => console.error(err))
+
+  fs.copy(p.join(
+    SOURCE_PATH, 'resources', 'settings.json'),
+    p.join(PROJECT_PATH, '.vscode', 'settings.json')
   ).catch(err => console.error(err))
 
 })()

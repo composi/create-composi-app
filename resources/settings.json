@@ -1,0 +1,5 @@
+{
+  "javascript.implicitProjectConfig.checkJs": true,
+  "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false
+}
