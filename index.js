@@ -144,11 +144,6 @@ const createComposiApp = (() => {
     p.join(PROJECT_PATH, 'src', 'images')
   ).catch(err => console.error(err))
 
-  fs.copy(p.join(
-    SOURCE_PATH, 'resources', 'settings.json'),
-    p.join(PROJECT_PATH, '.vscode', 'settings.json')
-  ).catch(err => console.error(err))
-
   fs.copy(
     p.join(SOURCE_PATH, 'resources', 'jsconfig.json'),
     p.join(PROJECT_PATH, 'jsconfig.json')
