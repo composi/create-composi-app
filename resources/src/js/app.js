@@ -15,6 +15,9 @@ render(<Title greeting='World' />, 'header')
  * and a function to handle the possible shutdown of the program returned by `done`.
  * Note that `subscriptions` and `done` are totally optional. If you are not going to use them, you can delete them from your program.
  */
+/**
+ * @type {import('@composi/core').Program}
+ */
 const program = {
   init() {
 
