@@ -8,10 +8,11 @@ render(<Title greeting='World' />, 'header')
 /**
  * @typedef {import('@composi/core').Message} Message
  * @typedef {import('@composi/core').Send} Send
+ * @typedef {import('@composi/core').Program} Program
  */
 /**
  * Default program for `run` function.
- * @type {import('@composi/core').Program}
+ * @type {Program}
  */
 const program = {
   init() {
