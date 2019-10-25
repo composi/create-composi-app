@@ -1,5 +1,8 @@
 import { h } from '@composi/core'
 
+/**
+ * @param {{greeting: string}} props
+ */
 export function Title({greeting}) {
   return (
     <header>
