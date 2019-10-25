@@ -12,7 +12,7 @@ module.exports = opts => {
     "build": "gulp",
     "build:fresh": "gulp fresh-build",
     "build:production": "gulp production",
-    "checkjs": "tsc --allowJs --checkJs --noEmit --moduleResolution node --target ES6 --jsx react --jsxFactory h src/js/*.js",
+    "checkjs": "tsc",
     "clean": "rimraf dist/*",
     "format": "prettier --no-semi --single-quote --write ./src/js/*",
     "lint": "eslint --config ./.eslintrc.json src/js",
