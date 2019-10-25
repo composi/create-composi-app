@@ -9,8 +9,8 @@
  * You can learn more about how to define your JavaScript's type information
  * in the following articles:
  * 1. https://medium.com/@trukrs/javascript-type-linting-5903e9e3625f
- * 2. https://medium.com/@trukrs/type-safe-javascript-with-jsdoc-7a2a63209b76
- * Also check out the TypeScript docs on how to use JSDoc: https://www.typescriptlang.org/docs/handbook/type-checking-javascript-files.html
+ * 2. Example projects: https://github.com/composi/examples
+ * Read the documentation on how to use JSDoc to define types: https://www.typescriptlang.org/docs/handbook/type-checking-javascript-files.html
  */
 
 
@@ -23,6 +23,7 @@ export function noop() {}
  * @typedef {import('@composi/core').Message} Message
  * @typedef {import('@composi/core').Send} Send
  * @typedef {import('@composi/core').Program} Program
+ * @typedef {import('@composi/core').VNode} VNode
  * @typedef {() => State} GetState
  */
 
