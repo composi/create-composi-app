@@ -12,6 +12,7 @@ render(<Title greeting='World' />, 'header')
  * @typedef {import('./types').State} State
  * @typedef {import('./types').GetState} GetState
  */
+
 /**
  * Default program for `run` function.
  * @type {Program}
