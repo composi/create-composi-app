@@ -12,6 +12,7 @@ module.exports = opts => {
     "build": "gulp",
     "build:fresh": "gulp fresh-build",
     "build:production": "gulp production",
+    "checkjs": "tsc --allowJs --checkJs --noEmit --moduleResolution node --target ES6 --jsx react --jsxFactory h src/js/*.js",
     "clean": "rimraf dist/*",
     "format": "prettier --no-semi --single-quote --write ./src/js/*",
     "lint": "eslint --config ./.eslintrc.json src/js",
@@ -48,7 +49,8 @@ module.exports = opts => {
     "rollup-plugin-babel-minify": "^9.0.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-resolve": "0.0.1-predev.1"
+    "rollup-plugin-resolve": "0.0.1-predev.1",
+    "typescript": "^3.6.4"
   }
 }
 `
