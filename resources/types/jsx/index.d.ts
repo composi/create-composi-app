@@ -44,325 +44,187 @@ declare global {
     // at the same time hiding them from the element's `props`.
     // https://github.com/Microsoft/TypeScript/issues/5478
     interface IntrinsicAttributes {
-      ref?: HTMLElement;
-      forwardRef?: (e: HTMLElement) => void;
-      props?: Props
+      props?: Props;
     }
 
     // https://github.com/ryansolid/babel-plugin-jsx-dom-expressions#special-binding
     interface CustomAttributes<T> {
-      ref?: T extends HTMLElement ? T : (el: T) => void;
-      forwardRef?: (el: T) => void;
       classList?: { [k: string]: boolean | undefined };
       events?: { [key: string]: EventHandler<T, CustomEvent> };
+
+      // Lifecycle Hooks
+      onmount?: (element: HTMLElement) => void;
+      onunmount?: (element: HTMLElement, Function) => void;
+      onupdate?: (element: HTMLElement, oldProps?: Props, newProps?: Props) => void;
     }
 
-    // Lowercase events are considered directly bound events, while camelCased events are delegated.
+    // Lowercase events are considered directly bound events.
     // https://github.com/ryansolid/babel-plugin-jsx-dom-expressions#oneventname--model
     interface DOMAttributes<T> extends CustomAttributes<T> {
       children?: Children;
       innerHTML?: string;
 
       // Clipboard Events
-      onCopy?: EventHandler<T, ClipboardEvent>;
       oncopy?: EventHandler<T, ClipboardEvent>;
-      onCopyCapture?: EventHandler<T, ClipboardEvent>;
       oncopycapture?: EventHandler<T, ClipboardEvent>;
-      onCut?: EventHandler<T, ClipboardEvent>;
       oncut?: EventHandler<T, ClipboardEvent>;
-      onCutCapture?: EventHandler<T, ClipboardEvent>;
       oncutcapture?: EventHandler<T, ClipboardEvent>;
-      onPaste?: EventHandler<T, ClipboardEvent>;
       onpaste?: EventHandler<T, ClipboardEvent>;
-      onPasteCapture?: EventHandler<T, ClipboardEvent>;
       onpastecapture?: EventHandler<T, ClipboardEvent>;
 
       // Composition Events
-      onCompositionEnd?: EventHandler<T, CompositionEvent>;
       oncompositionend?: EventHandler<T, CompositionEvent>;
-      onCompositionEndCapture?: EventHandler<T, CompositionEvent>;
       oncompositionendcapture?: EventHandler<T, CompositionEvent>;
-      onCompositionStart?: EventHandler<T, CompositionEvent>;
       oncompositionstart?: EventHandler<T, CompositionEvent>;
-      onCompositionStartCapture?: EventHandler<T, CompositionEvent>;
       oncompositionstartcapture?: EventHandler<T, CompositionEvent>;
-      onCompositionUpdate?: EventHandler<T, CompositionEvent>;
       oncompositionupdate?: EventHandler<T, CompositionEvent>;
-      onCompositionUpdateCapture?: EventHandler<T, CompositionEvent>;
       oncompositionupdatecapture?: EventHandler<T, CompositionEvent>;
 
       // Focus Events
-      onFocus?: EventHandler<T, FocusEvent>;
       onfocus?: EventHandler<T, FocusEvent>;
-      onFocusCapture?: EventHandler<T, FocusEvent>;
       onfocuscapture?: EventHandler<T, FocusEvent>;
-      onBlur?: EventHandler<T, FocusEvent>;
       onblur?: EventHandler<T, FocusEvent>;
-      onBlurCapture?: EventHandler<T, FocusEvent>;
       onblurcapture?: EventHandler<T, FocusEvent>;
 
       // Form Events
-      onChange?: EventHandler<T, Event>;
       onchange?: EventHandler<T, Event>;
-      onChangeCapture?: EventHandler<T, Event>;
       onchangecapture?: EventHandler<T, Event>;
-      onInput?: EventHandler<T, Event>;
       oninput?: EventHandler<T, Event>;
-      onInputCapture?: EventHandler<T, Event>;
       oninputcapture?: EventHandler<T, Event>;
-      onReset?: EventHandler<T, Event>;
       onreset?: EventHandler<T, Event>;
-      onResetCapture?: EventHandler<T, Event>;
       onresetcapture?: EventHandler<T, Event>;
-      onSubmit?: EventHandler<T, Event>;
       onsubmit?: EventHandler<T, Event>;
-      onSubmitCapture?: EventHandler<T, Event>;
       onsubmitcapture?: EventHandler<T, Event>;
 
       // Image Events
-      onLoad?: EventHandler<T, Event>;
       onload?: EventHandler<T, Event>;
-      onLoadCapture?: EventHandler<T, Event>;
       onloadcapture?: EventHandler<T, Event>;
-      onError?: EventHandler<T, Event>; // also a Media Event
       onerror?: EventHandler<T, Event>; // also a Media Event
-      onErrorCapture?: EventHandler<T, Event>; // also a Media Event
       onerrorcapture?: EventHandler<T, Event>; // also a Media Event
 
       // Keyboard Events
-      onKeyDown?: EventHandler<T, KeyboardEvent>;
       onkeydown?: EventHandler<T, KeyboardEvent>;
-      onKeyDownCapture?: EventHandler<T, KeyboardEvent>;
       onkeydowncapture?: EventHandler<T, KeyboardEvent>;
-      onKeyPress?: EventHandler<T, KeyboardEvent>;
       onkeypress?: EventHandler<T, KeyboardEvent>;
-      onKeyPressCapture?: EventHandler<T, KeyboardEvent>;
       onkeypresscapture?: EventHandler<T, KeyboardEvent>;
-      onKeyUp?: EventHandler<T, KeyboardEvent>;
       onkeyup?: EventHandler<T, KeyboardEvent>;
-      onKeyUpCapture?: EventHandler<T, KeyboardEvent>;
       onkeyupcapture?: EventHandler<T, KeyboardEvent>;
 
       // Media Events
-      onAbort?: EventHandler<T, Event>;
       onabort?: EventHandler<T, Event>;
-      onAbortCapture?: EventHandler<T, Event>;
       onabortcapture?: EventHandler<T, Event>;
-      onCanPlay?: EventHandler<T, Event>;
       oncanplay?: EventHandler<T, Event>;
-      onCanPlayCapture?: EventHandler<T, Event>;
       oncanplaycapture?: EventHandler<T, Event>;
-      onCanPlayThrough?: EventHandler<T, Event>;
       oncanplaythrough?: EventHandler<T, Event>;
-      onCanPlayThroughCapture?: EventHandler<T, Event>;
       oncanplaythroughcapture?: EventHandler<T, Event>;
-      onDurationChange?: EventHandler<T, Event>;
       ondurationchange?: EventHandler<T, Event>;
-      onDurationChangeCapture?: EventHandler<T, Event>;
       ondurationchangecapture?: EventHandler<T, Event>;
-      onEmptied?: EventHandler<T, Event>;
       onemptied?: EventHandler<T, Event>;
-      onEmptiedCapture?: EventHandler<T, Event>;
       onemptiedcapture?: EventHandler<T, Event>;
-      onEncrypted?: EventHandler<T, Event>;
       onencrypted?: EventHandler<T, Event>;
-      onEncryptedCapture?: EventHandler<T, Event>;
       onencryptedcapture?: EventHandler<T, Event>;
-      onEnded?: EventHandler<T, Event>;
       onended?: EventHandler<T, Event>;
-      onEndedCapture?: EventHandler<T, Event>;
       onendedcapture?: EventHandler<T, Event>;
-      onLoadedData?: EventHandler<T, Event>;
       onloadeddata?: EventHandler<T, Event>;
-      onLoadedDataCapture?: EventHandler<T, Event>;
       onloadeddatacapture?: EventHandler<T, Event>;
-      onLoadedMetadata?: EventHandler<T, Event>;
       onloadedmetadata?: EventHandler<T, Event>;
-      onLoadedMetadataCapture?: EventHandler<T, Event>;
       onloadedmetadatacapture?: EventHandler<T, Event>;
-      onLoadStart?: EventHandler<T, Event>;
       onloadstart?: EventHandler<T, Event>;
-      onLoadStartCapture?: EventHandler<T, Event>;
       onloadstartcapture?: EventHandler<T, Event>;
-      onPause?: EventHandler<T, Event>;
       onpause?: EventHandler<T, Event>;
-      onPauseCapture?: EventHandler<T, Event>;
       onpausecapture?: EventHandler<T, Event>;
-      onPlay?: EventHandler<T, Event>;
       onplay?: EventHandler<T, Event>;
-      onPlayCapture?: EventHandler<T, Event>;
       onplaycapture?: EventHandler<T, Event>;
-      onPlaying?: EventHandler<T, Event>;
       onplaying?: EventHandler<T, Event>;
-      onPlayingCapture?: EventHandler<T, Event>;
       onplayingcapture?: EventHandler<T, Event>;
-      onProgress?: EventHandler<T, Event>;
       onprogress?: EventHandler<T, Event>;
-      onProgressCapture?: EventHandler<T, Event>;
       onprogresscapture?: EventHandler<T, Event>;
-      onRateChange?: EventHandler<T, Event>;
       onratechange?: EventHandler<T, Event>;
-      onRateChangeCapture?: EventHandler<T, Event>;
       onratechangecapture?: EventHandler<T, Event>;
-      onSeeked?: EventHandler<T, Event>;
       onseeked?: EventHandler<T, Event>;
-      onSeekedCapture?: EventHandler<T, Event>;
       onseekedcapture?: EventHandler<T, Event>;
-      onSeeking?: EventHandler<T, Event>;
       onseeking?: EventHandler<T, Event>;
-      onSeekingCapture?: EventHandler<T, Event>;
       onseekingcapture?: EventHandler<T, Event>;
-      onStalled?: EventHandler<T, Event>;
       onstalled?: EventHandler<T, Event>;
-      onStalledCapture?: EventHandler<T, Event>;
       onstalledcapture?: EventHandler<T, Event>;
-      onSuspend?: EventHandler<T, Event>;
       onsuspend?: EventHandler<T, Event>;
-      onSuspendCapture?: EventHandler<T, Event>;
       onsuspendcapture?: EventHandler<T, Event>;
-      onTimeUpdate?: EventHandler<T, Event>;
       ontimeupdate?: EventHandler<T, Event>;
-      onTimeUpdateCapture?: EventHandler<T, Event>;
       ontimeupdatecapture?: EventHandler<T, Event>;
-      onVolumeChange?: EventHandler<T, Event>;
       onvolumechange?: EventHandler<T, Event>;
-      onVolumeChangeCapture?: EventHandler<T, Event>;
       onvolumechangecapture?: EventHandler<T, Event>;
-      onWaiting?: EventHandler<T, Event>;
       onwaiting?: EventHandler<T, Event>;
-      onWaitingCapture?: EventHandler<T, Event>;
       onwaitingcapture?: EventHandler<T, Event>;
 
       // MouseEvents
-      onClick?: EventHandler<T, MouseEvent>;
       onclick?: EventHandler<T, MouseEvent>;
-      onClickCapture?: EventHandler<T, MouseEvent>;
       onclickcapture?: EventHandler<T, MouseEvent>;
-      onContextMenu?: EventHandler<T, MouseEvent>;
       oncontextmenu?: EventHandler<T, MouseEvent>;
-      onContextMenuCapture?: EventHandler<T, MouseEvent>;
       oncontextmenucapture?: EventHandler<T, MouseEvent>;
-      onDoubleClick?: EventHandler<T, MouseEvent>;
       ondoubleclick?: EventHandler<T, MouseEvent>;
-      onDoubleClickCapture?: EventHandler<T, MouseEvent>;
       ondoubleclickcapture?: EventHandler<T, MouseEvent>;
-      onDrag?: EventHandler<T, DragEvent>;
       ondrag?: EventHandler<T, DragEvent>;
-      onDragCapture?: EventHandler<T, DragEvent>;
       ondragcapture?: EventHandler<T, DragEvent>;
-      onDragEnd?: EventHandler<T, DragEvent>;
       ondragend?: EventHandler<T, DragEvent>;
-      onDragEndCapture?: EventHandler<T, DragEvent>;
       ondragendcapture?: EventHandler<T, DragEvent>;
-      onDragEnter?: EventHandler<T, DragEvent>;
       ondragenter?: EventHandler<T, DragEvent>;
-      onDragEnterCapture?: EventHandler<T, DragEvent>;
       ondragentercapture?: EventHandler<T, DragEvent>;
-      onDragExit?: EventHandler<T, DragEvent>;
       ondragexit?: EventHandler<T, DragEvent>;
-      onDragExitCapture?: EventHandler<T, DragEvent>;
       ondragexitcapture?: EventHandler<T, DragEvent>;
-      onDragLeave?: EventHandler<T, DragEvent>;
       ondragleave?: EventHandler<T, DragEvent>;
-      onDragLeaveCapture?: EventHandler<T, DragEvent>;
       ondragleavecapture?: EventHandler<T, DragEvent>;
-      onDragOver?: EventHandler<T, DragEvent>;
       ondragover?: EventHandler<T, DragEvent>;
-      onDragOverCapture?: EventHandler<T, DragEvent>;
       ondragovercapture?: EventHandler<T, DragEvent>;
-      onDragStart?: EventHandler<T, DragEvent>;
       ondragstart?: EventHandler<T, DragEvent>;
-      onDragStartCapture?: EventHandler<T, DragEvent>;
       ondragstartcapture?: EventHandler<T, DragEvent>;
-      onDrop?: EventHandler<T, DragEvent>;
       ondrop?: EventHandler<T, DragEvent>;
-      onDropCapture?: EventHandler<T, DragEvent>;
       ondropcapture?: EventHandler<T, DragEvent>;
-      onMouseDown?: EventHandler<T, MouseEvent>;
       onmousedown?: EventHandler<T, MouseEvent>;
-      onMouseDownCapture?: EventHandler<T, MouseEvent>;
       onmousedowncapture?: EventHandler<T, MouseEvent>;
-      onMouseEnter?: EventHandler<T, MouseEvent>;
       onmouseenter?: EventHandler<T, MouseEvent>;
-      onMouseLeave?: EventHandler<T, MouseEvent>;
       onmouseleave?: EventHandler<T, MouseEvent>;
-      onMouseMove?: EventHandler<T, MouseEvent>;
       onmousemove?: EventHandler<T, MouseEvent>;
-      onMouseMoveCapture?: EventHandler<T, MouseEvent>;
       onmousemovecapture?: EventHandler<T, MouseEvent>;
-      onMouseOut?: EventHandler<T, MouseEvent>;
       onmouseout?: EventHandler<T, MouseEvent>;
-      onMouseOutCapture?: EventHandler<T, MouseEvent>;
       onmouseoutcapture?: EventHandler<T, MouseEvent>;
-      onMouseOver?: EventHandler<T, MouseEvent>;
       onmouseover?: EventHandler<T, MouseEvent>;
-      onMouseOverCapture?: EventHandler<T, MouseEvent>;
       onmouseovercapture?: EventHandler<T, MouseEvent>;
-      onMouseUp?: EventHandler<T, MouseEvent>;
       onmouseup?: EventHandler<T, MouseEvent>;
-      onMouseUpCapture?: EventHandler<T, MouseEvent>;
       onmouseupcapture?: EventHandler<T, MouseEvent>;
 
       // Selection Events
-      onSelect?: EventHandler<T, Event>;
       onselect?: EventHandler<T, Event>;
-      onSelectCapture?: EventHandler<T, Event>;
       onselectcapture?: EventHandler<T, Event>;
 
       // Touch Events
-      onTouchCancel?: EventHandler<T, TouchEvent>;
       ontouchcancel?: EventHandler<T, TouchEvent>;
-      onTouchCancelCapture?: EventHandler<T, TouchEvent>;
       ontouchcancelcapture?: EventHandler<T, TouchEvent>;
-      onTouchEnd?: EventHandler<T, TouchEvent>;
       ontouchend?: EventHandler<T, TouchEvent>;
-      onTouchEndCapture?: EventHandler<T, TouchEvent>;
       ontouchendcapture?: EventHandler<T, TouchEvent>;
-      onTouchMove?: EventHandler<T, TouchEvent>;
       ontouchmove?: EventHandler<T, TouchEvent>;
-      onTouchMoveCapture?: EventHandler<T, TouchEvent>;
       ontouchmovecapture?: EventHandler<T, TouchEvent>;
-      onTouchStart?: EventHandler<T, TouchEvent>;
       ontouchstart?: EventHandler<T, TouchEvent>;
-      onTouchStartCapture?: EventHandler<T, TouchEvent>;
       ontouchstartcapture?: EventHandler<T, TouchEvent>;
 
       // UI Events
-      onScroll?: EventHandler<T, UIEvent>;
       onscroll?: EventHandler<T, UIEvent>;
-      onScrollCapture?: EventHandler<T, UIEvent>;
       onscrollcapture?: EventHandler<T, UIEvent>;
 
       // Wheel Events
-      onWheel?: EventHandler<T, WheelEvent>;
       onwheel?: EventHandler<T, WheelEvent>;
-      onWheelCapture?: EventHandler<T, WheelEvent>;
       onwheelcapture?: EventHandler<T, WheelEvent>;
 
       // Animation Events
-      onAnimationStart?: EventHandler<T, AnimationEvent>;
       onanimationstart?: EventHandler<T, AnimationEvent>;
-      onAnimationStartCapture?: EventHandler<T, AnimationEvent>;
       onanimationstartcapture?: EventHandler<T, AnimationEvent>;
-      onAnimationEnd?: EventHandler<T, AnimationEvent>;
       onanimationend?: EventHandler<T, AnimationEvent>;
-      onAnimationEndCapture?: EventHandler<T, AnimationEvent>;
       onanimationendcapture?: EventHandler<T, AnimationEvent>;
-      onAnimationIteration?: EventHandler<T, AnimationEvent>;
       onanimationiteration?: EventHandler<T, AnimationEvent>;
-      onAnimationIterationCapture?: EventHandler<T, AnimationEvent>;
       onanimationiterationcapture?: EventHandler<T, AnimationEvent>;
 
       // Transition Events
-      onTransitionEnd?: EventHandler<T, TransitionEvent>;
       ontransitionend?: EventHandler<T, TransitionEvent>;
-      onTransitionEndCapture?: EventHandler<T, TransitionEvent>;
       ontransitionendcapture?: EventHandler<T, TransitionEvent>;
-
-      // Lifecycle Hooks
-      onmount?: (element: HTMLElement) => void
-      onunmount?: (element: HTMLElement, Function) => void
-      onupdate?: (element: HTMLElement, oldProps?: Props, newProps?: Props) => void
     }
 
     interface HTMLAttributes<T> extends DOMAttributes<T> {
