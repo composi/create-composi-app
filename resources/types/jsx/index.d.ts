@@ -63,6 +63,8 @@ declare global {
     interface DOMAttributes<T> extends CustomAttributes<T> {
       children?: Children;
       innerHTML?: string;
+      colspan?: number | string;
+      cols?: number | string;
 
       // Clipboard Events
       oncopy?: EventHandler<T, ClipboardEvent>;
@@ -261,6 +263,7 @@ declare global {
       coords?: string;
       crossorigin?: string;
       data?: string;
+      dataSet?: Object;
       dateTime?: string;
       default?: boolean;
       defer?: boolean;
@@ -348,7 +351,7 @@ declare global {
       step?: number | string;
       style?: Partial<CSSStyleDeclaration>;
       summary?: string;
-      tabindex?: number;
+      tabindex?: number | string;
       target?: string;
       title?: string;
       type?: string;
