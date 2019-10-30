@@ -1,4 +1,5 @@
-import { h, render, run } from '@composi/core'
+import { h, render, run, union, batchEffects } from '@composi/core'
+import {clone} from '@composi/clone'
 import { Title } from './components/title'
 
 // Render title component:
