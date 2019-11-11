@@ -14,6 +14,5 @@ module.exports = opts => {
   <header class="masthead"></header>
   <script src="/dist/js/app.js"></script>
 </body>
-</html>
-`
+</html>`
 }

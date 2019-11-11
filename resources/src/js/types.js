@@ -28,7 +28,7 @@ export function noop() {}
  * @typedef {() => State} GetState
  */
 
- /**
-  * Define your program's state here.
-  * @typedef {Object} State
-  */
+/**
+ * Define your program's state here.
+ * @typedef {Object} State
+ */
