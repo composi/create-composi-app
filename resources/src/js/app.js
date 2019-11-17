@@ -1,4 +1,4 @@
-import { h, render, run, union, batchEffects } from '@composi/core'
+import { h, render, run, union, batch } from '@composi/core'
 import {clone} from '@composi/clone'
 import { Title } from './components/title'
 
@@ -38,14 +38,14 @@ const program = {
 
   },
   /**
-   * @param {GetState} getState
-   * @param {Send} send
+   * @param {Send} [send]
+   * @param {GetState} [getState]
    */
-  subscriptions(getState, send) {
+  subscriptions(send, getState) {
 
   },
   /**
-   * @param {State} state
+   * @param {State} [state]
    */
   done(state) {
 
