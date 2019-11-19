@@ -43,7 +43,7 @@ module.exports = opts => {
     "gulp-gzip": "^1.4.2",
     "gulp-postcss": "^8.0.0",
     "gulp-sourcemaps": "^2.6.5",
-    "prettier": "^1.18.2",
+    "prettier": "^1.19.1",
     "rollup": "^1.21.4",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-babel-minify": "^9.0.0",
