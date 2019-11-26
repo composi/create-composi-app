@@ -149,4 +149,14 @@ const createComposiApp = (() => {
     p.join(PROJECT_PATH, 'tsconfig.json')
   ).catch(err => console.error(err))
 
+  fs.copy(
+    p.join(SOURCE_PATH, 'resources', 'tsconfig.json'),
+    p.join(PROJECT_PATH, 'tsconfig.json')
+  ).catch(err => console.error(err))
+
+  fs.copy(
+    p.join(SOURCE_PATH, 'resources', '.prettierignore'),
+    p.join(PROJECT_PATH, '.prettierignore')
+  ).catch(err => console.error(err))
+
 })()

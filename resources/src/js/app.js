@@ -1,9 +1,9 @@
 import { h, render, run, union, batch } from '@composi/core'
-import {clone} from '@composi/clone'
+import { clone } from '@composi/clone'
 import { Title } from './components/title'
 
 // Render title component:
-render(<Title greeting='World' />, 'header')
+render(<Title greeting="World" />, 'header')
 
 // Import global types:
 /**
@@ -20,14 +20,14 @@ render(<Title greeting='World' />, 'header')
  */
 const program = {
   init() {
-
+    // return state here
   },
   /**
-   * @param {State} state
+   * @param {State} sta
    * @param {Send} send
    */
   view(state, send) {
-
+    // return renderer here
   },
   /**
    * @param {State} state
@@ -35,20 +35,20 @@ const program = {
    * @param {Send} send
    */
   update(state, msg, send) {
-
+    // return actions here
   },
   /**
    * @param {Send} [send]
    * @param {GetState} [getState]
    */
   subscriptions(send, getState) {
-
+    // return subscriptions here
   },
   /**
    * @param {State} [state]
    */
   done(state) {
-
+    // handle cleanup here
   }
 }
 

@@ -14,7 +14,7 @@ module.exports = opts => {
     "build:production": "gulp production",
     "checkjs": "tsc",
     "clean": "rimraf dist/*",
-    "format": "prettier --no-semi --single-quote --write ./src/js/*",
+    "format": "prettier --write ./src/js",
     "lint": "eslint --config ./.eslintrc.json src/js",
     "start": "npm run build",
     "test": "echo \\"Error: no test specified\\" && exit 1"
@@ -51,6 +51,11 @@ module.exports = opts => {
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-resolve": "0.0.1-predev.1",
     "typescript": "^3.6.4"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true
   }
 }
 `
