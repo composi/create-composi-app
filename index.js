@@ -79,7 +79,7 @@ const createComposiApp = (() => {
   const SOURCE_PATH = __dirname
   const PACKAGE_NAME = name.replace(/\s/g, '-')
 
-  const PACKAGE = createPackage({ name: PACKAGE_NAME, user: USER, version: PKG.version })
+  const PACKAGE = createPackage({name: PACKAGE_NAME, user: USER, version: PKG.version})
 
   const HTML = createHTML({
     name: ORIGINAL_NAME
@@ -152,6 +152,11 @@ const createComposiApp = (() => {
   fs.copy(
     p.join(SOURCE_PATH, 'resources', '.prettierignore'),
     p.join(PROJECT_PATH, '.prettierignore')
+  ).catch(err => console.error(err))
+
+  fs.copy(
+    p.join(SOURCE_PATH, 'resources', 'settings.json'),
+    p.join(PROJECT_PATH, '.vscode/settings.json')
   ).catch(err => console.error(err))
 
 })()
