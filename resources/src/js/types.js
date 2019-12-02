@@ -19,7 +19,6 @@ export function noop() {}
 
 
 /**
- * Core types for use with view, update, subscriptions and actions.
  * @typedef {import('@composi/core').Message} Message
  * @typedef {import('@composi/core').Send} Send
  * @typedef {import('@composi/core').Program} Program
@@ -30,6 +29,5 @@ export function noop() {}
  */
 
 /**
- * Define your program's state here.
  * @typedef {Object} State
  */
