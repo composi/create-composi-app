@@ -1,6 +1,6 @@
-import { h, render, run, union, batch } from '@composi/core'
-import { clone } from '@composi/clone'
-import { Title } from './components/title'
+import {h, render, run, union, batch} from '@composi/core'
+import {clone} from '@composi/clone'
+import {Title} from './components/title'
 
 // Render title component:
 render(<Title greeting="World" />, 'header')
@@ -21,6 +21,7 @@ render(<Title greeting="World" />, 'header')
 const program = {
   init() {
     // return state here
+
   },
   /**
    * @param {State} sta
@@ -28,6 +29,7 @@ const program = {
    */
   view(state, send) {
     // return renderer here
+
   },
   /**
    * @param {State} state
@@ -36,6 +38,7 @@ const program = {
    */
   update(state, msg, send) {
     // return actions here
+
   },
   /**
    * @param {Send} [send]
@@ -43,12 +46,14 @@ const program = {
    */
   subscriptions(send, getState) {
     // return subscriptions here
+
   },
   /**
    * @param {State} [state]
    */
   done(state) {
     // handle cleanup here
+    
   }
 }
 
