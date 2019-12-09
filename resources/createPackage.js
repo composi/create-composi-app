@@ -26,7 +26,7 @@ module.exports = opts => {
     "@babel/preset-env": "^7.6.0",
     "@composi/are-equal": "^1.0.8",
     "@composi/clone": "^1.2.1",
-    "@composi/core": "^2.7.1",
+    "@composi/core": "^2.7.2",
     "@composi/gestures": "^1.0.6",
     "@composi/get-type": "^1.0.9",
     "@composi/idb": "^1.0.8",
