@@ -5,10 +5,10 @@
       {
         "modules": false,
         "targets": {
-          "safari": "10",
-          "chrome": "65",
-          "firefox": "60",
-          "edge": "44"
+          "safari": "13",
+          "chrome": "79",
+          "firefox": "72",
+          "edge": "79"
         }
       }
     ]
@@ -21,6 +21,8 @@
         "pragma": "h",
         "pragmaFrag": "Fragment"
       }
-    ]
+    ],
+    "@babel/proposal-optional-chaining",
+    "@babel/proposal-nullish-coalescing-operator"
   ]
 }

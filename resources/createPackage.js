@@ -20,13 +20,15 @@ module.exports = opts => {
     "test": "echo \\"Error: no test specified\\" && exit 1"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.0",
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.8.3",
+    "@babel/plugin-proposal-optional-chaining": "^7.8.3",
     "@babel/plugin-transform-parameters": "^7.4.4",
     "@babel/plugin-transform-react-jsx": "^7.3.0",
-    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-env": "^7.8.3",
     "@composi/are-equal": "^1.0.9",
     "@composi/clone": "^1.2.3",
-    "@composi/core": "^2.7.6",
+    "@composi/core": "^2.7.5",
     "@composi/gestures": "^1.0.9",
     "@composi/get-type": "^1.0.11",
     "@composi/idb": "^1.0.9",
