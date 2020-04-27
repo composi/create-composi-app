@@ -23,6 +23,7 @@ module.exports = opts => {
     "@babel/core": "^7.9.0",
     "@babel/plugin-external-helpers": "^7.8.3",
     "@babel/plugin-transform-parameters": "^7.9.5",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
     "@babel/preset-env": "^7.9.5",
     "@composi/are-equal": "^1.0.9",
     "@composi/clone": "^1.2.2",
